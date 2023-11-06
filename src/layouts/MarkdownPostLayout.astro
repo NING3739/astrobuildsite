@@ -1,0 +1,90 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <div class="blogpost-layout">
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <div class="blogpost-frontmatter">
+      <h1>{frontmatter.title}</h1>
+      <p><em>{frontmatter.description}</em></p>
+      <div class="date-tags">
+        <p id="date">{frontmatter.pubDate.slice(0, 10)}</p>
+        <span class="material-symbols-outlined"> folder</span>
+        <div class="tags">
+          {
+            frontmatter.tags.map((tag) => (
+              <p>
+                <a href={`/tags/${tag}`}>{tag}</a>
+              </p>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <article>
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  .blogpost-layout {
+    position: relative;
+  }
+
+  .blogpost-layout img {
+    width: 100%;
+    display: block; /* 为了去除图片下面的默认间距 */
+    position: relative; /* 设置为相对定位，让其伪元素绝对定位在它上面 */
+  }
+
+  .blogpost-frontmatter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 20px;
+    color: #fff;
+    padding: 35px; /* 如果需要的话，增加一些内边距 */
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中内容 */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(40, 40, 40, 0.25) 25%,
+      rgba(20, 20, 20, 0.5) 50%,
+      rgba(0 0 0 / 100%) 100%
+    );
+  }
+
+  .date-tags {
+    display: flex;
+    align-items: center; /* 垂直居中内容 */
+    gap: 15px; /* 在 date 和 tags 之间添加一些间距 */
+  }
+
+  .tags {
+    display: flex;
+    text-transform: capitalize;
+    gap: 5px;
+    color: #fff;
+  }
+
+  .tags p a {
+    color: #fff;
+  }
+
+  #date {
+    margin: 0;
+  }
+
+  article {
+    padding: 35px;
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+const { title, description, image, pubDate, url } = Astro.props;
+---
+
+<div class="blogpost-list">
+  <li>
+    <div class="blogpost-content">
+      <a href={url}>
+        {title}
+      </a>
+      <p>{description}</p>
+      <p>{pubDate}</p>
+    </div>
+    <img src={image.url} alt={image.alt} />
+  </li>
+  <hr />
+</div>
+
+<style>
+  .blogpost-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+  }
+
+  .blogpost-list li {
+    display: flex;
+    align-items: flex-start; /* 使内容从顶部开始，您也可以使用 'center' 使内容垂直居中 */
+    justify-content: space-between; /* 在内容和图像之间提供空间 */
+  }
+
+  .blogpost-content {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+  }
+
+  .blogpost-list .blogpost-content {
+    display: flex;
+    flex-direction: column; /* 使 title、description 和 pubDate 垂直排列 */
+    gap: 10px; /* 提供垂直间距，根据需要进行调整 */
+    margin-bottom: 10px;
+  }
+
+  .blogpost-list img {
+    width: 230px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+
+  hr {
+    border: 1px solid rgba(128, 128, 128, 0.12);
+    margin-bottom: 35px;
+  }
+</style>
