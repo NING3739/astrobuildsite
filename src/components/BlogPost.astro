@@ -13,27 +13,41 @@ const { title, description, image, pubDate, url } = Astro.props;
     </div>
     <img src={image.url} alt={image.alt} />
   </li>
-  <hr />
 </div>
+<hr />
 
 <style>
   .blogpost-list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 20px 0;
   }
 
-  .blogpost-list li {
-    display: flex;
-    align-items: flex-start; /* 使内容从顶部开始，您也可以使用 'center' 使内容垂直居中 */
-    justify-content: space-between; /* 在内容和图像之间提供空间 */
+  .blogpost-list {
+    padding: 35px;
+  }
+
+  .blogpost-list:hover {
+    color: #1976d2;
+    background-color: rgba(2, 11, 22, 0.03);
   }
 
   .blogpost-content {
     display: flex;
     justify-content: start;
     width: 50%;
+  }
+
+  .blogpost-content a {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .blogpost-content p {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
   }
 
   .blogpost-list .blogpost-content {
@@ -55,6 +69,6 @@ const { title, description, image, pubDate, url } = Astro.props;
 
   hr {
     border: 1px solid rgba(128, 128, 128, 0.12);
-    margin-bottom: 35px;
+    margin: 0 35px 0 35px;
   }
 </style>

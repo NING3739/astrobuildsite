@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "404";
+---
+
+<BaseLayout title={title}>
+  <div class="error">
+    <img src="/404.png" alt="404" />
+    <h2>
+      浏览千帖未有踪，<br /> 恰似云端过客空。<br /> 莫让心情随页散，<br />
+      <a href="/">点击归航继续梦。</a>
+    </h2>
+  </div>
+</BaseLayout>
+
+<style>
+  .error {
+    padding: 35px;
+  }
+
+  img,
+  h2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  h2 a {
+    text-decoration: none;
+  }
+</style>

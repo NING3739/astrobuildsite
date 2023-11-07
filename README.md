@@ -52,3 +52,44 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+```
+astrobuildsite
+|
+├─ astro.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ public
+├─ src
+│  ├─ components
+│  │  ├─ ArticlePagination.astro
+│  │  ├─ BlogPost.astro
+│  │  ├─ Footer.astro
+│  │  ├─ Header.astro
+│  │  ├─ NavgationBar.astro
+│  │  └─ Social.astro
+│  ├─ env.d.ts
+│  ├─ layouts
+│  │  ├─ BaseLayout.astro
+│  │  └─ MarkdownPostLayout.astro
+│  ├─ pages
+│  │  ├─ about.astro
+│  │  ├─ archive.astro
+│  │  ├─ index.astro
+│  │  ├─ posts
+│  │  │  ├─ post-1.md
+│  │  │  ├─ post-2.md
+│  │  │  ├─ post-3.md
+│  │  │  ├─ post-4.md
+│  │  │  ├─ post-5.md
+│  │  │  ├─ post-6.md
+│  │  │  └─ post-7.md
+│  │  ├─ resource.astro
+│  │  └─ tags
+│  │     ├─ [tag].astro
+│  │     └─ index.astro
+│  └─ styles
+│     └─ global.css
+└─ tsconfig.json
+
+```

@@ -4,7 +4,7 @@ title: "我的第四篇博客文章"
 author: "Astro 学习者"
 description: "这篇文章会自己出现在列表中！"
 image:
-  url: "https://docs.astro.build/default-og-image.png"
+  url: "https://images.unsplash.com/photo-1697441642505-0f4ce8fbe98a?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   alt: "The word astro against an illustration of planets and stars."
 pubDate: 2022-08-08
 tags: ["astro", "successes"]

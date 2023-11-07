@@ -9,6 +9,20 @@ font-family: 'Noto Serif SC', serif; */
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1976d2;
+}
+
+li {
+  list-style: none;
+}
+
 body {
   background-color: #fcfcfc;
   height: 100vh;

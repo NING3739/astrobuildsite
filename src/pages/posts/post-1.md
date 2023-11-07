@@ -1,40 +1,45 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "我的第一篇博客文章"
-pubDate: 2022-07-01
-description: "想要在 RISC-V 裸机上运行 C 语言程序，不但要进行交叉编译，还要对生成的二进制程序进行一些修改。"
-author: "Astro 学习者"
+title: "关于"
+pubDate: 2023-11-07
+description: "我的一份自我介绍"
+author: "李宁"
 image:
-  url: "https://s30876.pcdn.co/wp-content/uploads/Japan-e1634207070862-1170x630.jpg.webp"
-  alt: "The full Astro logo."
-tags: ["astro", "blogging", "learning in public"]
+  url: "/me.jpeg"
+  alt: "我"
+tags: ["介绍", "博客"]
 ---
 
-欢迎来到我学习关于 Astro 的新博客！在这里，我将分享我建立新网站的学习历程。
+# **前言**
 
-## 我做了什么
+在这个充满数据和信息的世界里，每一个点击都是一次旅行，每一次停留都是一份缘分。欢迎来到我的小站，在这里，我将我的点点滴滴编织成网，希望能捕捉到与你相遇的那一刻。感谢你的到访，这是一个既展示自我，也寻找同频共鸣的空间。
 
-1.  **安装 Astro**：首先，我创建了一个新的 Astro 项目并设置好了我的在线账号。
+<br>
 
-2.  **制作页面**：然后我学习了如何通过创建新的 `.astro` 文件并将它们保存在 `src/pages/` 文件夹里来制作页面。
+# **关于本站**
 
-3.  **发表博客文章**：这是我的第一篇博客文章！我现在有用 Astro 编写的页面和用 Markdown 写的文章了！
+你现在浏览的这个角落，是我精心打造的小宇宙。每一个字节，每一个像素，都承载着我的热情和期待。这里是我技术探索的记录者，见证了我从编码的一行行不解，到构建完整系统的成长。它不仅是我的技术日志，也记录着我的生活哲思和灵感火花。无论是对技术的洞见还是生活的感悟，我都在这里一一展开，希望这些内容能与你产生共鸣，激发你的灵感。
 
-## 下一步计划
+<br>
 
-我将完成 Astro 教程，然后继续编写更多内容。关注我以获取更多信息。
+# **版权**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum facilisis leo vel fringilla. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Ut sem nulla pharetra diam sit amet nisl. Est velit egestas dui id ornare. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Ut sem viverra aliquet eget. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. At augue eget arcu dictum. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Amet aliquam id diam maecenas ultricies mi.
+本站遵守 [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 协议
 
-favicon for https://ningli.me@ning
-favicon for https://www.lincoln.ac.nz/@LincolnUN
-favicon for https://chat.openai.com/@chatgpt
-favicon for https://archive.org/@InternetArchive
+<br>
 
-Urna porttitor rhoncus dolor purus non enim praesent elementum facilisis. Molestie nunc non blandit massa enim nec dui nunc mattis. Sem nulla pharetra diam sit amet nisl suscipit. Id eu nisl nunc mi. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Sit amet purus gravida quis blandit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Magna fringilla urna porttitor rhoncus dolor. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Ut eu sem integer vitae. Orci phasellus egestas tellus rutrum tellus. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Dignissim sodales ut eu sem integer vitae justo. Tempus imperdiet nulla malesuada pellentesque elit eget. Lectus urna duis convallis convallis tellus id interdum velit.
+# **关于我**
 
-Fringilla urna porttitor rhoncus dolor purus. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Etiam non quam lacus suspendisse faucibus interdum. Eget dolor morbi non arcu risus quis varius quam. Senectus et netus et malesuada. Erat pellentesque adipiscing commodo elit at. Diam sit amet nisl suscipit. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Lectus proin nibh nisl condimentum id venenatis. Consequat semper viverra nam libero. Cursus turpis massa tincidunt dui ut ornare. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Purus sit amet luctus venenatis lectus magna fringilla urna. Eget gravida cum sociis natoque penatibus. Tellus elementum sagittis vitae et leo duis ut diam quam. Scelerisque felis imperdiet proin fermentum leo vel orci. Eu facilisis sed odio morbi quis commodo. Sed risus ultricies tristique nulla aliquet.
+我名叫 [Barry](https://ningli.me/)，是一个坚信技术能改变世界的梦想家。对我而言，编程不只是工作，它是一种艺术，一种把逻辑和创意结合的魔法。当不是在代码的海洋里遨游，我会拿起画笔，在画布上追寻色彩与形状之间的和谐。生活中，我追求平衡——平衡工作和激情，理性和感性，科技和艺术。
 
-Erat nam at lectus urna duis. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Tristique senectus et netus et malesuada fames. Semper eget duis at tellus at urna. Dictum non consectetur a erat nam at. Non quam lacus suspendisse faucibus interdum posuere lorem. Risus nullam eget felis eget nunc lobortis mattis. Amet nulla facilisi morbi tempus iaculis urna id. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Sit amet luctus venenatis lectus magna fringilla. Malesuada fames ac turpis egestas. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Erat pellentesque adipiscing commodo elit. Vel quam elementum pulvinar etiam. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Eu ultrices vitae auctor eu augue ut. Imperdiet proin fermentum leo vel orci porta non pulvinar.
+这个博客是我与世界对话的地方，也是我期待与你交流的起点。每个人的故事都是独一无二的，我在这里诉说我的故事，也期待听到你的声音。让我们在这个平台上，交换想法，分享经验，共同成长。
 
-Volutpat lacus laoreet non curabitur gravida. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Ipsum consequat nisl vel pretium lectus quam. Est lorem ipsum dolor sit amet. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Integer eget aliquet nibh praesent tristique magna sit amet purus. Tristique senectus et netus et malesuada fames ac turpis. Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. Maecenas sed enim ut sem viverra. Ante in nibh mauris cursus mattis molestie a iaculis at. Vitae auctor eu augue ut lectus arcu bibendum at.
+再次感谢你的访问，愿这里的文字能够触动你的心弦，我们的故事从这里开始延展。
+
+<br>
+
+# **联系我**
+
+- **[Github](https://github.com/NING3739)**
+- **[Twitter](https://twitter.com/ningli3739)**
+- **[个人网站](https://ningli.me/)(英文版)**

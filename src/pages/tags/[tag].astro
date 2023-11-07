@@ -11,7 +11,9 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) =>
       post.frontmatter.tags.includes(tag)
-    );
+    ).sort((a, b) => new Date(b.frontmatter.pubDate).getTime() -
+    new Date(a.frontmatter.pubDate).getTime()); // 从新到旧排序
+
     return {
       params: { tag },
       props: { posts: filteredPosts },
@@ -24,12 +26,33 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout title={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      posts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
-  </ul>
+  <div class="categories-list">
+    <h1>分類 / {tag}</h1>
+    <ul>
+      {
+        posts.map((post) => (
+          <BlogPost
+            key={post.url} // 增加 key 属性，用于唯一标识每个列表元素
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            image={post.frontmatter.image}
+            pubDate={post.frontmatter.pubDate.slice(0, 10)}
+          />
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
+
+<style>
+  .categories-list{
+    padding: 35px 0 35px 0px;
+  }
+
+  h1 {
+    padding-left: 35px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+</style>
