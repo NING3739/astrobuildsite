@@ -1,11 +1,11 @@
-/* font-family: 'Ma Shan Zheng', cursive;
-font-family: 'Noto Serif SC', serif; */
+/* font-family: 'Noto Sans SC', sans-serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Noto Serif TC', serif; */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Noto Serif SC", serif;
   -webkit-font-smoothing: antialiased;
 }
 

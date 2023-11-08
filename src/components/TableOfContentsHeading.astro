@@ -1,0 +1,37 @@
+---
+// TableOfContentsHeading.astro
+const { heading, level } = Astro.props;
+---
+
+<li class={`level-${level}`}>
+  <a href={"#" + heading.slug}>
+    {heading.text}
+  </a>
+  {
+    heading.subheadings.length > 0 && (
+      <ul>
+        {heading.subheadings.map((subheading) => (
+          <Astro.self heading={subheading} level={level + 1} />
+        ))}
+      </ul>
+    )
+  }
+</li>
+
+<style>
+  li .level-1 {
+    margin-left: 0px;
+  }
+
+  li .level-2 {
+    margin-left: 20px;
+  }
+
+  li .level-3 {
+    margin-left: 30px;
+  }
+
+  li .level-4 {
+    margin-left: 40px;
+  }
+</style>

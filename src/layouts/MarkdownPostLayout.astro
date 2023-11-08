@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter } = Astro.props;
+import TableOfContents from "../components/TableOfContents.astro";
+const { frontmatter, headings } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
@@ -8,7 +9,7 @@ const { frontmatter } = Astro.props;
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
     <div class="blogpost-frontmatter">
       <h1>{frontmatter.title}</h1>
-      <p><em>{frontmatter.description}</em></p>
+      <p id="description">{frontmatter.description}</p>
       <div class="date-tags">
         <p id="date">{frontmatter.pubDate.slice(0, 10)}</p>
         <span class="material-symbols-outlined"> folder</span>
@@ -28,7 +29,7 @@ const { frontmatter } = Astro.props;
     <slot />
   </article>
 </BaseLayout>
-
+<TableOfContents headings={headings} />
 <style>
   .blogpost-layout {
     position: relative;
@@ -71,7 +72,14 @@ const { frontmatter } = Astro.props;
     font-size: 30px;
     font-weight: 600;
     font-style: normal;
+    font-family: "Noto Sans SC", sans-serif;
     line-height: 1.5em;
+  }
+
+  #description {
+    font-family: "Noto Serif SC", serif;
+    font-weight: bold;
+    width: 80%;
   }
 
   .date-tags {

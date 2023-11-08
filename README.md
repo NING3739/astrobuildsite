@@ -93,3 +93,56 @@ astrobuildsite
 └─ tsconfig.json
 
 ```
+
+```
+astrobuildsite
+├
+├─ .gitignore
+├─ .vscode
+│  ├─ extensions.json
+│  └─ launch.json
+├─ README.md
+├─ astro.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ 404.png
+│  ├─ favicon.svg
+│  └─ me.jpeg
+├─ src
+│  ├─ components
+│  │  ├─ BlogPost.astro
+│  │  ├─ Footer.astro
+│  │  ├─ Header.astro
+│  │  ├─ NavgationBar.astro
+│  │  ├─ Social.astro
+│  │  ├─ TableOfContents.astro
+│  │  └─ TableOfContentsHeading.astro
+│  ├─ env.d.ts
+│  ├─ layouts
+│  │  ├─ BaseLayout.astro
+│  │  └─ MarkdownPostLayout.astro
+│  ├─ pages
+│  │  ├─ 404.astro
+│  │  ├─ about.astro
+│  │  ├─ archive.astro
+│  │  ├─ index.astro
+│  │  ├─ posts
+│  │  │  ├─ post-1.md
+│  │  │  ├─ post-2.md
+│  │  │  ├─ post-3.md
+│  │  │  ├─ post-4.md
+│  │  │  ├─ post-5.md
+│  │  │  ├─ post-6.md
+│  │  │  └─ post-7.md
+│  │  ├─ resource.astro
+│  │  └─ tags
+│  │     ├─ [tag].astro
+│  │     └─ index.astro
+│  ├─ scripts
+│  │  └─ BacktoTop.js
+│  └─ styles
+│     └─ global.css
+└─ tsconfig.json
+
+```
