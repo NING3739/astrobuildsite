@@ -10,12 +10,18 @@
   </div>
 
   <div class="footer-license">
-    <a href="https://ningli.me/">&copy;Ning 2023，</a>
+    <a href="https://ningli.me/">&copy;<span id="currentYear"></span> NING，</a>
     <br /><a href="https://creativecommons.org/licenses/by-nc/4.0/"
       >本站遵循 CC-BY-NC 4.0 协议。</a
     >
   </div>
 </footer>
+
+<script>
+  document.getElementById("currentYear").textContent = String(
+    new Date().getFullYear()
+  );
+</script>
 
 <style>
   footer {
