@@ -1,0 +1,47 @@
+---
+const { prevUrl, nextUrl } = Astro.props;
+
+function getPageNumber(url) {
+  const match = url.match(/\/page\/(\d+)\//);
+  return match ? parseInt(match[1]) : 1;
+}
+
+const currentPage = getPageNumber((Astro as any).pathname);
+const prevPage = getPageNumber(prevUrl);
+const nextPage = getPageNumber(nextUrl);
+---
+
+<nav class="pagination">
+  {
+    prevUrl && (
+      <a href={prevUrl} class={{ active: currentPage === prevPage }}>
+        上一页
+      </a>
+    )
+  }
+
+  {
+    nextUrl && (
+      <a href={nextUrl} class={{ active: currentPage === nextPage }}>
+        下一页
+      </a>
+    )
+  }
+</nav>
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+  }
+
+  .pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .pagination a.active {
+    text-decoration: underline;
+  }
+</style>
