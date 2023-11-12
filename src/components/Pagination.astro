@@ -1,20 +1,23 @@
 ---
-const { prevUrl, nextUrl } = Astro.props;
+const { prevUrl, nextUrl, page } = Astro.props;
 
 function getPageNumber(url) {
   const match = url.match(/\/page\/(\d+)\//);
   return match ? parseInt(match[1]) : 1;
 }
 
-const currentPage = getPageNumber((Astro as any).pathname);
-const prevPage = getPageNumber(prevUrl);
-const nextPage = getPageNumber(nextUrl);
+const currentPage = page ? getPageNumber(page.url) : 1;
+const prevPage = prevUrl ? getPageNumber(prevUrl) : 1;
+const nextPage = nextUrl ? getPageNumber(nextUrl) : 1;
 ---
 
 <nav class="pagination">
   {
     prevUrl && (
-      <a href={prevUrl} class={{ active: currentPage === prevPage }}>
+      <a
+        href={prevUrl}
+        class={`pagination-link ${currentPage === prevPage ? "active" : ""}`}
+      >
         上一页
       </a>
     )
@@ -22,7 +25,10 @@ const nextPage = getPageNumber(nextUrl);
 
   {
     nextUrl && (
-      <a href={nextUrl} class={{ active: currentPage === nextPage }}>
+      <a
+        href={nextUrl}
+        class={`pagination-link ${currentPage === nextPage ? "active" : ""}`}
+      >
         下一页
       </a>
     )
@@ -36,12 +42,12 @@ const nextPage = getPageNumber(nextUrl);
     margin: 35px 0;
   }
 
-  .pagination a {
+  .pagination-link {
     margin: 0 10px;
     text-decoration: none;
   }
 
-  .pagination a.active {
+  .pagination-link.active {
     text-decoration: underline;
   }
 </style>
