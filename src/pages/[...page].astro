@@ -38,6 +38,8 @@ const title = "織夢者筆記";
       </ul>
     )
   }
+
+  <i>{page.currentPage}/{page.lastPage}</i>
   {page && <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />}
 </BaseLayout>
 

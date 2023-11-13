@@ -26,7 +26,7 @@ astrobuildsite
 │  │  ├─ 404.astro
 │  │  ├─ about.astro
 │  │  ├─ archive.astro
-│  │  ├─ index.astro
+│  │  ├─ [...page].astro
 │  │  ├─ posts
 │  │  │  └─ post.md
 │  │  ├─ resource.astro
