@@ -38,10 +38,17 @@ const title = "織夢者筆記";
       </ul>
     )
   }
-
-  <i>{page.currentPage}/{page.lastPage}</i>
-  {page && <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />}
 </BaseLayout>
+<div class="blogpost-controller">
+  <div class="currentpage">
+    <div class="current">{page.currentPage}</div>
+
+    <div class="slash">/</div>
+
+    <div class="total">{page.lastPage}</div>
+  </div>
+  {page && <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />}
+</div>
 
 <style>
   .blogpost {
@@ -61,5 +68,27 @@ const title = "織夢者筆記";
 
   .pagination a.active {
     text-decoration: underline;
+  }
+
+  .blogpost-controller {
+    display: grid;
+    align-items: baseline;
+  }
+
+  .currentpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: center;
+    font-weight: bold;
+  }
+
+  .current,
+  .total {
+    padding-left: 5px;
+  }
+
+  .slash {
+    padding: 6px;
   }
 </style>

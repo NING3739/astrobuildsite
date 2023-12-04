@@ -18,7 +18,9 @@ const nextPage = nextUrl ? getPageNumber(nextUrl) : 1;
         href={prevUrl}
         class={`pagination-link ${currentPage === prevPage ? "active" : ""}`}
       >
-        上一页
+        <span class="material-symbols-outlined" id="left">
+          chevron_left
+        </span>
       </a>
     )
   }
@@ -29,7 +31,7 @@ const nextPage = nextUrl ? getPageNumber(nextUrl) : 1;
         href={nextUrl}
         class={`pagination-link ${currentPage === nextPage ? "active" : ""}`}
       >
-        下一页
+        <span class="material-symbols-outlined">chevron_right</span>
       </a>
     )
   }
@@ -37,17 +39,21 @@ const nextPage = nextUrl ? getPageNumber(nextUrl) : 1;
 
 <style>
   .pagination {
-    display: flex;
-    justify-content: center;
+    display: grid;
     margin: 35px 0;
   }
 
   .pagination-link {
-    margin: 0 10px;
+    display: grid;
+    justify-content: space-between;
     text-decoration: none;
   }
+  .material-symbols-outlined {
+    display: grid;
+    align-items: center;
+  }
 
-  .pagination-link.active {
-    text-decoration: underline;
+  #left {
+    margin-bottom: 20px;
   }
 </style>

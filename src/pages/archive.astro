@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Pagination from "../components/Pagination.astro";
 const allPosts = await Astro.glob("./posts/*.md");
 
 const postsByYear = allPosts.reduce((acc, post) => {
